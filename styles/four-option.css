@@ -1,0 +1,46 @@
+.wrapper-4option {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.four-option {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(360px, 480px));
+    grid-template-rows: 360px;
+    font-weight: var(--font-weight-bold);
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--color-text-main);
+}
+
+.option:nth-child(odd) {
+    background: #1C2A33;
+    color: var(--color-text-logo);
+    padding-top: 87px;
+}
+
+.option:nth-child(even) {
+    background: var(--color-text-logo);
+    padding-top: 98px;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 103px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.option svg, .option span {
+    transition: 0.3s;
+}
+
+.option:hover svg, .option:hover span {
+    transform: scale(1.2);
+}
