@@ -22,10 +22,13 @@
     <link rel="stylesheet" href="styles/loader.css">
     <link rel="stylesheet" href="styles/news-section.css">
     <link rel="stylesheet" href="styles/feedback.css">
+    <link rel="stylesheet" href="styles/best-gallery.css">
     <script src="https://kit.fontawesome.com/805cf04234.js" crossorigin="anonymous"></script>
     <script defer src="./scripts/slider.js"></script>
     <script defer src="./scripts/work-gallery.js"></script>
     <script defer src="./scripts/carousel.js"></script>
+    <script defer src="./scripts/masonry.pkgd.min.js"></script>
+    <script defer src="./scripts/best-gallery.js"></script>
     <title>Step-project-ham</title>
   </head>
   <body>
@@ -442,13 +445,13 @@
                 </div>
                 <div class="work-gallery">
                 </div>
-                <div class="loader-box hidden">
+                <div class="loader-box amazing-loader  hidden">
                   <div class="ball"></div>
                   <div class="ball"></div>
                   <div class="ball"></div>
                   <div class="ball"></div>
                 </div>
-                <button class="more-btn">
+                <button class="more-btn amazing-btn">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 6.99735H9.99996V1.49787C9.99996 1.22194 9.77611 0.997242 9.49998 0.997242H6.4999C6.22387 0.997242 5.99991 1.22194 5.99991 1.49787V6.99735H0.499994C0.223838 6.99735 7.98702e-06 7.22206 7.98702e-06 7.4984V10.4976C7.98702e-06 10.7731 0.223838 10.9974 0.499994 10.9974H5.99991V16.4977C5.99991 16.7732 6.22387 16.998 6.4999 16.998H9.49998C9.77611 16.998 9.99996 16.7732 9.99996 16.4977V10.9974H15.5C15.776 10.9974 16 10.7731 16 10.4976V7.4984C16 7.22206 15.776 6.99735 15.5 6.99735Z" fill="white"/>
                     </svg>
@@ -610,8 +613,8 @@
           </div>
         </div>
       </section>
-        <div class="feedback-wrapper">
-          <section id="feedback" class="feedback">
+      <div class="feedback-wrapper">
+        <section id="feedback" class="feedback">
               <div class="wrapper-content">
                 <div class="container-section-header container-feedback-header">
                   <h2 class="section-header feedback-header">What People Say About theHam</h2>
@@ -713,9 +716,89 @@
                   </div>
                 </div>
               </div>
-          </section>
+        </section>
+      </div>
+      <section id="best-gallery" class="best-gallery">
+        <div class="wrapper-content">
+          <div class="container-section-header container-best-header">
+            <h2 class="section-header best-header">Gallery of best images</h2>
+          </div>
+          <div class="grid best-container">
+            <div class="grid-item">
+              <img src="images/bestGallery/house-1.png" alt="vanglo house 1">
+            </div>
+            <div class="grid-item">
+              <img src="images/bestGallery/house-2.png" alt="vanglo house 2">
+            </div>
+            <div class="grid-item grid-item--width2">
+              <div class="grid-layer">
+                <div class="grid-layer-item">
+                  <img src="images/bestGallery/house-1.png" alt="vanglo house 1">
+                </div>
+                <div class="grid-layer-item">
+                  <img src="images/bestGallery/house-4.png" alt="vanglo house 4">
+                </div>
+                <div class="grid-mini">
+                  <div class="grid-mini-item">
+                    <img src="images/bestGallery/outer-1.png" alt="outer image 1">
+                  </div>
+                  <div class="grid-mini-item">
+                    <img src="images/bestGallery/outer-2.png" alt="outer image 2">
+                  </div>
+                  <div class="grid-mini-item">
+                    <img src="images/bestGallery/outer-3.png" alt="outer image 3">
+                  </div>
+                  <div class="grid-mini-item">
+                    <img src="images/bestGallery/outer-4.png" alt="outer image 4">
+                  </div>
+                  <div class="grid-mini-item">
+                    <img src="images/bestGallery/house-5.png" alt="outer image 5">
+                  </div>
+                  <div class="grid-mini-item">
+                    <img src="images/bestGallery/outer-6.png" alt="outer image 6">
+                  </div>
+                  <div class="grid-mini-item">
+                    <img src="images/bestGallery/house-4.png" alt="outer image 7">
+                  </div>
+                  <div class="grid-mini-item">
+                    <img src="images/bestGallery/outer-7.png" alt="outer image 8">
+                  </div>
+                  <div class="grid-mini-item">
+                    <img src="images/bestGallery/house-7.png" alt="outer image 9">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item">
+              <img src="images/bestGallery/house-4.png" alt="vanglo house 4">
+            </div>
+            <div class="grid-item">
+              <img src="images/bestGallery/house-5.png" alt="vanglo house 5">
+            </div>
+            <div class="grid-item grid-item--width2">
+              <img src="images/bestGallery/house-6.png" alt="vanglo house 6">
+            </div>
+            <div class="grid-item">
+              <img src="images/bestGallery/house-7.png" alt="vanglo house 7">
+            </div>
+            <div class="grid-item">
+              <img src="images/bestGallery/house-8.png" alt="vanglo house 8">
+            </div>
+          </div>
         </div>
-
+        <div class="loader-box best-loader hidden">
+          <div class="ball"></div>
+          <div class="ball"></div>
+          <div class="ball"></div>
+          <div class="ball"></div>
+        </div>
+        <button class="more-btn best-btn">
+            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 6.99735H9.99996V1.49787C9.99996 1.22194 9.77611 0.997242 9.49998 0.997242H6.4999C6.22387 0.997242 5.99991 1.22194 5.99991 1.49787V6.99735H0.499994C0.223838 6.99735 7.98702e-06 7.22206 7.98702e-06 7.4984V10.4976C7.98702e-06 10.7731 0.223838 10.9974 0.499994 10.9974H5.99991V16.4977C5.99991 16.7732 6.22387 16.998 6.4999 16.998H9.49998C9.77611 16.998 9.99996 16.7732 9.99996 16.4977V10.9974H15.5C15.776 10.9974 16 10.7731 16 10.4976V7.4984C16 7.22206 15.776 6.99735 15.5 6.99735Z" fill="white"/>
+            </svg>
+            <span>Load More</span>    
+        </button>
+    </section>  
 
     </main>
     <footer class="footer">

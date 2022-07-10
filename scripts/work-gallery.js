@@ -20,47 +20,48 @@ flipElement.innerHTML = `
     </div>                 
 `;
 
-const addMoreBtn = document.querySelector(".more-btn");
+const addMoreBtn = document.querySelector(".amazing-btn");
 
 let count = 0;
 
-const loaderBox = document.querySelector(".loader-box");
+const loaderBox = document.querySelector(".amazing-loader");
 
 
 
 // перемикач зображень по категоріям
 workBtnContainer.addEventListener("click", function (event) {
-    workBtnCollection.forEach((btn) => btn.classList.remove("work-active"));
-    event.target.classList.add("work-active");
-    workGallery.innerHTML = "";
-    switch (event.target.dataset.work) {
-        case "graphicDesign":
-            graphicDesignImgCollection.forEach((img) => workGallery.append(newFlipCard(img)));
-            addMoreBtn.remove();
-            break;
-        case "webDesign":
-            webDesignImgCollection.forEach((img) => workGallery.append(newFlipCard(img)));
-            addMoreBtn.remove();
-            break;
-        case "landingPages":
-            landingPagesImgCollection.forEach((img) => workGallery.append(newFlipCard(img)));
-            addMoreBtn.remove();
-            break;
-        case "wordpress":
-            wordpressImgCollection.forEach((img) => workGallery.append(newFlipCard(img)));
-            addMoreBtn.remove();
-            break;
-        default:
-            workSectionContainer.append(addMoreBtn);
-            shuffleArr(allImgCollection);
-            count = 0;
-            allImgCollection.forEach(function(img) {
-                if (count < 12) {
-                count++;
-                workGallery.append(newFlipCard(img));
-                } 
-            });
-    }
+    if(event.target.closest(".work-btn")) {    
+        workBtnCollection.forEach((btn) => btn.classList.remove("work-active"));
+        event.target.classList.add("work-active");
+        workGallery.innerHTML = "";
+        switch (event.target.dataset.work) {
+            case "graphicDesign":
+                graphicDesignImgCollection.forEach((img) => workGallery.append(newFlipCard(img)));
+                addMoreBtn.remove();
+                break;
+            case "webDesign":
+                webDesignImgCollection.forEach((img) => workGallery.append(newFlipCard(img)));
+                addMoreBtn.remove();
+                break;
+            case "landingPages":
+                landingPagesImgCollection.forEach((img) => workGallery.append(newFlipCard(img)));
+                addMoreBtn.remove();
+                break;
+            case "wordpress":
+                wordpressImgCollection.forEach((img) => workGallery.append(newFlipCard(img)));
+                addMoreBtn.remove();
+                break;
+            default:
+                workSectionContainer.append(addMoreBtn);
+                shuffleArr(allImgCollection);
+                count = 0;
+                allImgCollection.forEach(function(img) {
+                    if (count < 12) {
+                    count++;
+                    workGallery.append(newFlipCard(img));
+                    } 
+                });
+        }}
 });
 
 
